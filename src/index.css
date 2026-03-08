@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin './hero.js';
+
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  --heroui-background: #0a0a0a;
+}
+
+[data-overlay-container] {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link.active {
+  background-color: #e5e7eb;
+  color: #000;
+}
+.dark .nav-link.active {
+  background-color: #1e2939;
+  color: #fff;
+}
